@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">4EVER calc</a>
+    <ul>
+        <li><a href="#">¿Necesitas otra calculadora?</a> </li>
+        <li><a href="#">Github</a> </li>
+        <li><a href="#">About</a> </li>
+      </ul>
+  </header>
+  <main>
+    <section class="sidebar">
+      <label for="fig-geometry" class="sidebar__box
+      ">
+        <img src="./img/icon-geometry.png" alt="">
+        <p>FIG. GEOMETRICAS</p>
+        <input type="radio" name="sidebar" id="fig-geometry" checked onclick="myIframe(1)">
+        <span class="category-icon fig-geometry"></span>
+        
+      </label>
+      <label for="discounts" class="sidebar__box
+      ">
+        <img src="./img/icon-discount.png" alt="">
+        <p>DESCUENTOS</p>
+        <input type="radio" name="sidebar" id="discounts" onclick="myIframe(2)">
+        <span class="category-icon discounts"></span>
+        
+      </label>
+      <label for="statistics" class="sidebar__box
+      ">
+        <img src="./img/icon-statistics.png" alt="">
+        <p>ESTADISTICAS</p>
+        <input type="radio" name="sidebar" id="statistics" onclick="myIframe(3)">
+        <span class="category-icon statistics"></span>
+        
+      </label>
+      <label for="salaries" class="sidebar__box
+      ">
+        <img src="./img/icon-salaries.png" alt="">
+        <p>SALARIOS</p>
+        <input type="radio" name="sidebar" id="salaries" onclick="myIframe(4)">
+        <span class="category-icon salaries"></span>
+        
+      </label>
+    </section>
+    <iframe src="./01-figuras-geometricas/figuras.html" frameborder="0" name="calculators" class="calculators"></iframe>
+  </main>
+</body>
+<script>
+  function myIframe(section) {
+    let frame = document.querySelector('.calculators')
+    switch (section){
+      case 1:
+        frame.setAttribute('src','./01-figuras-geometricas/figuras.html');
+        break;
+      case 2:
+        frame.setAttribute('src','./02-precios-descuentos/descuentos.html');
+        break;
+      case 3:
+        frame.setAttribute('src','./03-estadisiticas/estadisticas.html')
+        break;
+      case 4:
+        frame.setAttribute('src','./04-analisis-salarial/salarios.html')
+        break;
+    }
+  }
+</script>
+</html>
