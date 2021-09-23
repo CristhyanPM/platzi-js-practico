@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./styles/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
   <header>
-    <a href="#" class="logo">4EVER calc</a>
-    <ul>
+    <a href="#" class="logo">OneMath</a>
+    <div class="shrink-menu">
+      <button type="button" class="menu-icon"><img src="img/menu.png" alt=""></button>
+      <span>x</span>
+      <ul class="wide-menu">
         <li><a href="#">¿Necesitas otra calculadora?</a> </li>
         <li><a href="#">Github</a> </li>
         <li><a href="#">About</a> </li>
       </ul>
+    </div>
   </header>
   <main>
     <section class="sidebar">
@@ -54,7 +58,7 @@
         
       </label>
     </section>
-    <iframe src="./01-figuras-geometricas/figuras.html" frameborder="0" name="calculators" class="calculators"></iframe>
+    <iframe src="./01-figuras-geometricas/figuras-rebuild.html" frameborder="0" name="calculators" class="calculators"></iframe>
   </main>
 </body>
 <script>
@@ -62,7 +66,7 @@
     let frame = document.querySelector('.calculators')
     switch (section){
       case 1:
-        frame.setAttribute('src','./01-figuras-geometricas/figuras.html');
+        frame.setAttribute('src','./01-figuras-geometricas/figuras-rebuild.html');
         break;
       case 2:
         frame.setAttribute('src','./02-precios-descuentos/descuentos.html');

@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  background-color: #FEB000;
+  color: #172B3D;
+}
+body header .logo {
+  margin-left: 3.2rem;
+  font-size: 3.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #172B3D;
+}
+body header .shrink-menu .menu-icon {
+  display: none;
+  visibility: hidden;
+  background-color: transparent;
+  border: none;
+}
+body header .shrink-menu .menu-icon img {
+  width: 30px;
+  height: 50px;
+}
+body header .shrink-menu span {
+  display: none;
+}
+body header .wide-menu {
+  display: flex;
+  font-weight: 500;
+  list-style: none;
+  padding-right: 3.2rem;
+}
+body header .wide-menu li a {
+  text-decoration: none;
+  color: #0D2031;
+  padding: 0 1rem;
+}
+body main {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  height: 88vh;
+  margin: 0 auto;
+  transition: ease-in 0.3s;
+}
+body main .sidebar {
+  width: 25vw;
+  padding-top: 2rem;
+  background-color: #0D2031;
+  display: flex;
+  flex-direction: column;
+}
+body main .sidebar__box {
+  width: 100%;
+  height: 6rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  overflow: hidden;
+}
+body main .sidebar__box:hover {
+  background-color: #172B3D;
+}
+body main .sidebar__box img {
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 30px;
+  height: 30px;
+  margin: 0 1rem 0 0.5rem;
+}
+body main .sidebar__box p {
+  z-index: 20;
+}
+body main .sidebar__box input {
+  -webkit-appearance: none;
+  visibility: none;
+  display: none;
+}
+body main .sidebar__box span {
+  visibility: hidden;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  background-color: #172B3D;
+  border-right: 4px solid #172B3D;
+  transition: ease 0.3s;
+  z-index: 10;
+}
+body main .sidebar__box input:checked ~ span {
+  display: block;
+  visibility: visible;
+  height: 6rem;
+  width: 100%;
+  background-color: none;
+  border-right: 4px solid #FEB000;
+  z-index: 10;
+}
+body main .calculators {
+  width: 75vw;
+  transition: ease-in 0.3s;
+}
+
+@media screen and (max-width: 850px) {
+  body header {
+    height: 10vh;
+  }
+  body header .wide-menu {
+    display: none;
+  }
+  body header .shrink-menu {
+    position: relative;
+  }
+  body header .shrink-menu .menu-icon {
+    cursor: pointer;
+    display: block;
+    visibility: initial;
+    margin-right: 1.2rem;
+  }
+  body header .shrink-menu .menu-icon:focus {
+    opacity: 0;
+  }
+  body header .shrink-menu .menu-icon:focus ~ .wide-menu {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-align: right;
+    background-color: #FEB000;
+    border-radius: 4px;
+  }
+  body header .shrink-menu .menu-icon:focus ~ .wide-menu li {
+    width: 100%;
+    padding-bottom: 1.5rem;
+  }
+  body header .shrink-menu .menu-icon:focus ~ .wide-menu li a {
+    width: 100%;
+  }
+  body header .shrink-menu .menu-icon:focus ~ span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 30;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    padding-right: 1.2rem;
+    font-size: 5rem;
+    line-height: 5rem;
+    cursor: pointer;
+  }
+  body main .sidebar {
+    width: 8vw;
+  }
+  body main .sidebar__box {
+    justify-content: center;
+  }
+  body main .sidebar p {
+    display: none;
+    visibility: hidden;
+  }
+  body main .calculators {
+    width: 92vw;
+    min-height: 500px;
+  }
+}
+@media (max-width: 720px) {
+  body header {
+    height: 8vh;
+    min-height: 50px;
+  }
+  body header .logo {
+    margin-left: 1.2rem;
+  }
+  body main {
+    height: 92vh;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  body main .sidebar {
+    width: 100%;
+    height: 8vh;
+    padding: 0;
+    flex-direction: row;
+  }
+  body main .sidebar__box {
+    width: 25%;
+  }
+  body main .sidebar span {
+    border-top: 4px solid #172B3D;
+    border-right: 0;
+  }
+  body main .sidebar input:checked ~ span {
+    border-top: 4px solid #FEB000;
+    border-right: 0;
+  }
+  body main .calculators {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

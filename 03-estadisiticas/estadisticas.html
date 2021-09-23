@@ -4,9 +4,57 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Datos estadísticos</title>
 </head>
 <body style="text-align: center; margin: auto;">
-  Working...
+  <main>
+    <div class="user-field">
+      <div class="input-container">
+        <p>Ingrese números para formar una lista</p>
+        <div class="input-container__entry-field">
+          <input type="number">
+          <button type="button">Agregar</button>
+        </div>
+      </div>
+      <ul class="list-container">
+
+      </ul>
+    </div>
+    <div class="result-area">
+      <div class="result-area__calculation promedio">
+        <p>Promedio</p>
+        <div class="result-area__calculation--value">
+          <input type="text" readonly>
+          <button type="button" class="copy-button">Copiar</button>
+        </div>
+      </div>
+      <div class="result-area__calculation mediana">
+        <p>Mediana</p>
+        <div class="result-area__calculation--value">
+          <input type="text" readonly>
+          <button type="button" class="copy-button">Copiar</button>
+        </div>
+      </div>
+      <div class="result-area__calculation moda">
+        <p>Moda</p>
+        <div class="result-area__calculation--value">
+          <input type="text" readonly>
+          <button type="button" class="copy-button">Copiar</button>
+        </div>
+      </div>
+      <div class="result-area__extra">
+        <select name="extra-calculation" id="extra-calculation">
+          <option value="less">Menos frecuente</option>
+          <option value="second-most">Segundo más frecuente</option>
+        </select>
+        <p>result</p>
+      </div>
+    </div>
+  </main>
 </body>
+<script src="scripts/calculos.js"></script>
 </html>

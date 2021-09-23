@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+  background-color: #d4e2ff;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+main {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  min-height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  background: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0px 5px 10px #627b91;
+}
+
+.user-field {
+  max-height: 40rem;
+  height: 80%;
+  width: 40%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.6rem;
+  padding: 1rem;
+  border: #DBDBDB 1px solid;
+  border-radius: 0.8rem;
+}
+.user-field .input-container {
+  width: 100%;
+}
+.user-field .input-container > p {
+  font-weight: 500;
+}
+.user-field .input-container__entry-field {
+  width: 100%;
+  height: 2.8rem;
+  margin-top: 1rem;
+  display: flex;
+}
+.user-field .input-container__entry-field input {
+  width: 80%;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  font-size: 1.6rem;
+  outline: none;
+  border: 2px solid #FEB000;
+  border-right: 0;
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+.user-field .input-container__entry-field input:focus {
+  border: 2px solid #0D2031;
+  border-right: 0;
+}
+.user-field .input-container__entry-field button {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80%;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 0.4rem 0.4rem 0;
+  background-color: #FEB000;
+  color: #181818;
+}
+.user-field .input-container__entry-field button:active {
+  background-color: #0D2031;
+  color: #FFEFCC;
+}
+.user-field .list-container {
+  max-width: 250px;
+  max-height: 300px;
+  overflow: auto;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-gap: 0.5rem;
+}
+.user-field .list-container li {
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.result-area {
+  max-height: 40rem;
+  height: 80%;
+  min-height: 20rem;
+  width: 40%;
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+  border: #DBDBDB 1px solid;
+  border-radius: 0.8rem;
+}
+.result-area__calculation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.result-area__calculation > p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0D2031;
+}
+.result-area__calculation--value {
+  width: 100%;
+  height: 2.8rem;
+  margin-top: 0.5rem;
+  display: flex;
+}
+.result-area__calculation--value input {
+  width: 80%;
+  padding: 0.25rem 0 0.25rem 0.5rem;
+  font-size: 1.6rem;
+  outline: none;
+  border: 2px solid #0D2031;
+  border-right: 0;
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+.result-area__calculation--value input:focus {
+  border: 2px solid #004FFF;
+  border-right: 0;
+}
+.result-area__calculation--value button {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80%;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 0.4rem 0.4rem 0;
+  background-color: #0D2031;
+  color: #e6e6e6;
+}
+.result-area__calculation--value button:active {
+  background-color: #004FFF;
+}
+.result-area__extra {
+  margin-top: 1rem;
+  display: flex;
+  font-size: 1.6rem;
+  border: 2px solid #0D2031;
+  border-radius: 0.4rem;
+}
+.result-area__extra select {
+  width: 70%;
+}
+.result-area__extra p {
+  width: 30%;
+  padding-left: 0.5rem;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 2rem 0;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .user-field {
+    width: 80%;
+  }
+  .user-field .list-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+
+  .result-area {
+    margin-top: 2rem;
+    width: 80%;
+  }
+  .result-area__calculation {
+    width: 100%;
+  }
+  .result-area__extra {
+    width: 100%;
+  }
+  .result-area__extra p {
+    padding-left: 0.5rem;
+    font-weight: 500;
+    font-size: 3vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

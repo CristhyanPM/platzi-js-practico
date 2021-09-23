@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+.nav-container {
+  width: 100%;
+  height: 12vh;
+  min-height: 50px;
+  position: relative;
+  background: whitesmoke;
+}
+
+.nav {
+  position: absolute;
+  bottom: 20%;
+  left: 32px;
+  display: flex;
+  justify-content: flex-start;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.nav__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1.5rem 0 0;
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  background-color: #DBDBDB;
+  color: #0D2031;
+  cursor: pointer;
+}
+.nav__button a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  font-weight: inherit;
+}
+.nav__button.active {
+  background-color: #004FFF;
+  color: #e6e6e6;
+  font-weight: 700;
+}
+
+main {
+  width: 100%;
+  padding-bottom: 5rem;
+  min-height: 600px;
+  height: 100vh;
+  background: whitesmoke;
+}
+
+.carousel-container {
+  width: 80%;
+  height: 88vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  background: whitesmoke;
+}
+
+.calc-carousel {
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.calc-slide {
+  position: relative;
+  width: 260px;
+  min-height: 300px;
+  height: 450px;
+  margin: 0 30px;
+  padding: 25px 0 25px;
+  opacity: 0.5;
+  border-radius: 8px;
+  scroll-snap-align: start;
+  background: #dddddd;
+  filter: blur(2px);
+}
+.calc-slide h2 {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 12px;
+  font-size: 2.5rem;
+}
+.calc-slide h2 img {
+  max-width: 50px;
+  width: 30px;
+  max-height: 50px;
+  margin: 0 8px 0 4px;
+}
+.calc-slide .operation-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 350px;
+}
+.calc-slide .operation-box .input-container label {
+  position: relative;
+  cursor: text;
+  color: rgba(0, 0, 0, 0.7);
+}
+.calc-slide .operation-box .input-container label span {
+  position: absolute;
+  top: -0.8rem;
+  left: 1.1rem;
+  transition: transform 0.3s, color 0.3s;
+  font-size: 1.6rem;
+  width: 120px;
+}
+.calc-slide .operation-box .input-container input {
+  width: 100%;
+  background: #F5F5F5;
+  border: 1.5px solid #F5F5F5;
+  border-radius: 0.4rem;
+  outline: none;
+  height: 3.6rem;
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  padding: 0 0.7rem;
+  margin: 1rem 0;
+}
+.calc-slide .operation-box .input-container input:focus {
+  border: 1.5px solid #FEB000;
+  background: #fff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.calc-slide .operation-box .input-container input:not(:placeholder-shown) {
+  background: #FFEFCC;
+}
+.calc-slide .operation-box .input-container input:focus + span,
+.calc-slide .operation-box .input-container input:not(:placeholder-shown) + span {
+  transform: translateY(-27px) scale(0.8) translateX(-15px);
+  color: #FEB000;
+  font-weight: 500;
+}
+.calc-slide .action-box .action-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.calc-slide .action-box button {
+  cursor: pointer;
+  width: 40%;
+  height: 4rem;
+  overflow: hidden;
+  font-size: 1.9rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  line-height: 2.4rem;
+  background: #fff;
+  border: 2px solid #0D2031;
+  color: #0D2031;
+  border-radius: 4px;
+}
+.calc-slide .action-box .perimetro {
+  font-size: 1.6rem;
+}
+.calc-slide .action-box .reset {
+  width: 15%;
+  background: #0D2031;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc-slide .action-box .result {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem auto 1rem;
+  font-weight: 700;
+  background: #DBDBDB;
+  font-size: 2.4rem;
+}
+
+.calc-slide.active {
+  transform: scale(1.2);
+  opacity: 1;
+  box-shadow: 0px 4px 8px rgba(13, 32, 49, 0.5);
+  background: #fff;
+  filter: none;
+}
+
+#triangulos-isoseles {
+  display: none;
+}
+#triangulos-isoseles .label-altura button {
+  position: absolute;
+  top: -14px;
+  right: 0rem;
+  padding: 0 0.5rem;
+  height: 3.6rem;
+  border: none;
+  background-color: #ffca4f;
+  border-radius: 0 0.4rem 0.4rem 0;
+  font-weight: 700;
+  color: #0D2031;
+}
+
+#check {
+  display: inline-block;
+  position: absolute;
+  right: 12%;
+  margin-top: 0.3rem;
+}
+
+.check {
+  display: inline-block;
+  position: absolute;
+  right: 18%;
+  font-size: 1.4rem;
+}
+
+#check:checked ~ #triangulos-normales {
+  display: none;
+}
+
+#check:checked ~ #triangulos-isoseles {
+  display: block;
+}
+
+@media (max-width: 850px) {
+  .nav {
+    left: 12px;
+  }
+
+  .carousel-container {
+    width: 100%;
+  }
+
+  .calc-slide {
+    width: 280px;
+  }
+
+  #triangulos-isoseles .label-altura button {
+    right: 0.25rem;
+  }
+}
+
+/*# sourceMappingURL=style-rebuild.css.map */

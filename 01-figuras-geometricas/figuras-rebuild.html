@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style-rebuild.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Cálculos Figuras Geométricas</title>
+</head>
+<body>
+  <main>
+    <div class="nav-container">
+      <ul class="nav">
+        <li class="nav__button active">
+          Cuadriláteros
+        </li>
+        <li class="nav__button">
+          Triángulos
+        </li>
+        <li class="nav__button">
+          Círculos
+        </li>
+      </ul>
+    </div>
+    <div class="carousel-container">
+      <ul class="calc-carousel">
+        <li class="calc-slide active" id="cuadrilateros">
+          <form action="" >
+            <h2><img src="./img/square.svg" alt=""><span>Cuadrado</span></h2>
+            <div class="operation-box">
+              <div class="input-container">
+                <label for="lados">
+                  <input type="text" placeholder=" " class="lados" id="lados">
+                  <span>Lados</span>
+                </label>
+              </div>
+              <div class="action-box">
+                <div class="action-buttons">
+                  <button type="button" class="perimetro">Perímetro</button>
+                  <button type="button" class="area">Área</button>
+                  <button type="reset" class="reset"><img src="./img/reload.svg" alt=""></button>
+                </div>
+                <p class="result">Calculemos</p>
+              </div>
+            </div>
+          </form>
+        </li>
+        <li class="calc-slide" id="triangulos">
+          <form action="">
+            <h2><img src="./img/triangle.svg" alt=""><span>Triángulo</span></h2>
+            <input type="checkbox" name="check" id="check">
+            <label class="check" for="check">isósceles</label>
+            <div class="operation-box" id="triangulos-normales">
+              <div class="input-container">
+                <label for="ladoA">
+                  <input type="text" placeholder=" " class="ladoA" id="ladoA">
+                  <span>LadoA</span>
+                </label>
+                <label for="ladoB">
+                  <input type="text" placeholder=" " class="ladoB" id="ladoB">
+                  <span>LadoB</span>
+                </label>
+                <label for="base">
+                  <input type="text" placeholder=" " class="base" id="base">
+                  <span>Base</span>
+                </label>
+                <label for="altura">
+                  <input type="text" placeholder=" " class="altura" id="altura">
+                  <span>Altura</span>
+                </label>
+              </div>
+              <div class="action-box">
+                <div class="action-buttons">
+                  <button type="button" class="perimetro">Perímetro</button>
+                  <button type="button" class="area">Área</button>
+                  <button type="reset" class="reset"><img src="./img/reload.svg" alt=""></button>
+                </div>
+                <p class="result">Calculemos</p>
+              </div>
+            </div>
+            <div class="operation-box" id="triangulos-isoseles">
+              <div class="input-container">
+                <label for="ladosAB">
+                  <input type="text" placeholder=" " class="ladosAB" id="ladosAB">
+                  <span>Lados Iguales</span>
+                </label>
+                <label for="base-iso">
+                  <input type="text" placeholder=" " class="base-iso" id="base-iso">
+                  <span>Base</span>
+                </label>
+                <label for="altura-iso" class="label-altura">
+                  <input type="text" placeholder=" " class="altura-iso" id="altura-iso">
+                  <span>Altura</span>
+                  <button type="button" class="calcular-altura">Calcular</button>
+                </label>
+              </div>
+              <div class="action-box">
+                <div class="action-buttons">
+                  <button type="button" class="perimetro">Perímetro</button>
+                  <button type="button" class="area">Área</button>
+                  <button type="reset" class="reset"><img src="./img/reload.svg" alt=""></button>
+                </div>
+                <p class="result">Calculemos</p>
+              </div>
+            </div>
+          </form>
+        </li>
+        <li class="calc-slide" id="circulos">
+          <form action="" >
+            <h2><img src="./img/circle.svg" alt=""><span>Círculo</span></h2>
+            <div class="operation-box">
+              <div class="input-container">
+                <label for="radio">
+                  <input type="text" placeholder=" " class="radio" id="radio">
+                  <span>Radio</span>
+                </label>
+              </div>
+              <div class="action-box">
+                <div class="action-buttons">
+                  <button type="button" class="perimetro">Perímetro</button>
+                  <button  type="button" class="area">Área</button>
+                  <button type="reset" class="reset"><img src="./img/reload.svg" alt=""></button>
+                </div>
+                <p class="result">Calculemos</p>
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </main>
+</body>
+<script defer src="./scripts/slide.js"></script>
+<script defer src="./scripts/operaciones.js"></script>
+<script defer src="./scripts/tr-isoseles.js"></script>
+</html>
